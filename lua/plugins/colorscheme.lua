@@ -5,7 +5,7 @@ return {
     name = "catppuccin",
     priority = 1000,
   },
-  { 
+  {
     "morhetz/gruvbox",
     lazy = false,
     name = "gruvbox",

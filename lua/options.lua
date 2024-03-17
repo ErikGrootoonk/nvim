@@ -7,7 +7,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set clipboard=unnamedplus")
 
 -- Set leader to space
-vim.g.mapleader = ' ' 
+vim.g.mapleader = ' '
 
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<cr>')
