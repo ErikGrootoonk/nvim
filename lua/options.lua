@@ -54,3 +54,5 @@ vim.keymap.set('n', 'te' , ':tabedit')
 vim.keymap.set('n', '<tab>', ':tabnext<cr>')
 vim.keymap.set('n', '<s-tab>', ':tabprev<cr>')
 
+-- set cursor line
+vim.opt.cursorline = true
