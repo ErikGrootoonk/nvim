@@ -4,8 +4,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 
 -- Set clipboard to systemclipboard
-vim.cmd("set clipboard=unnamedplus")
-
+vim.opt.clipboard:append("unnamedplus")
 -- Set leader to space
 vim.g.mapleader = ' '
 
