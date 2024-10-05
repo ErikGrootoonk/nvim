@@ -48,10 +48,11 @@ vim.opt.smartcase = true
 -- always keep 8 lines above/below cursor unless at start/end of a file
 vim.opt.scrolloff = 8
 
--- new tab and use tab for switching tabs
-vim.keymap.set('n', 'te' , ':tabedit')
-vim.keymap.set('n', '<tab>', ':tabnext<cr>')
-vim.keymap.set('n', '<s-tab>', ':tabprev<cr>')
+-- buffer keymaps
+vim.keymap.set('n', '<tab>' , ':bnext<cr>')
+vim.keymap.set('n', '<stab>', ':bprevious<cr>')
+vim.keymap.set('n', '<leader>x', ':bdelete<cr>')
+vim.keymap.set('n', '<leader>bn', ':enew<cr>')
 
 -- set cursor line
 vim.opt.cursorline = true
