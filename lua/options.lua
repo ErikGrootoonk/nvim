@@ -4,9 +4,20 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 
 -- Set clipboard to systemclipboard
-vim.opt.clipboard:append("unnamedplus")
+--vim.o.clipboard: 'unnamedplus'
+
 -- Set leader to space
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- For conciseness
+local opts = { noremap = true, silent = true }
+
+-- delete single character without copying into register
+vim.keymap.set('n', 'x', '"_x', opts)
+
+-- Keep last yanked when pasting
+vim.keymap.set('v', 'p', '"_dP', opts)
 
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<cr>')
