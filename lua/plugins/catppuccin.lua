@@ -4,24 +4,21 @@ return {
     lazy = false,
     name = "catppuccin",
     priority = 1000,
-      config = function ()
-      end
   },
   {
     "morhetz/gruvbox",
     lazy = false,
     name = "gruvbox",
     priority = 1000,
-    config = function()
-    end
   },
   {
-    "ghifarit53/tokyonight-vim",
+    "navarasu/onedark.nvim",
     lazy = false,
-    name = "tokyonight",
+    name = "OneDark.nvim",
+    style = "deep",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "tokyonight"
+      vim.cmd.colorscheme "onedark"
     end
   }
 }

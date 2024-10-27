@@ -4,20 +4,10 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 
 -- Set clipboard to systemclipboard
---vim.o.clipboard: 'unnamedplus'
+vim.cmd("set clipboard=unnamedplus")
 
 -- Set leader to space
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
--- For conciseness
-local opts = { noremap = true, silent = true }
-
--- delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', opts)
-
--- Keep last yanked when pasting
-vim.keymap.set('v', 'p', '"_dP', opts)
+vim.g.mapleader = ' ' 
 
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<cr>')
@@ -59,29 +49,7 @@ vim.opt.smartcase = true
 -- always keep 8 lines above/below cursor unless at start/end of a file
 vim.opt.scrolloff = 8
 
--- buffer keymaps
+-- new tab and use tab for switching buffers
 vim.keymap.set('n', '<tab>' , ':bnext<cr>')
 vim.keymap.set('n', '<stab>', ':bprevious<cr>')
-vim.keymap.set('n', '<leader>x', ':bdelete<cr>')
-vim.keymap.set('n', '<leader>bn', ':enew<cr>')
 
--- set cursor line
-vim.opt.cursorline = true
-
--- enable windows clipboard tool
-vim.opt.clipboard = "unnamedplus"
-
-if vim.fn.has("wsl") == 1 then
-  vim.g.clipboard = {
-    name = "win32yank-wsl",
-    copy = {
-      ["+"] = "win32yank.exe -i --crlf",
-      ["*"] = "win32yank.exe -i --crlf",
-    },
-    paste = {
-      ["+"] = "win32yank.exe -o --lf",
-      ["*"] = "win32yank.exe -o --lf",
-    },
-    cache_enabled = 0,
-  }
-end

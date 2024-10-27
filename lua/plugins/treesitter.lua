@@ -3,6 +3,7 @@
       build = ":TSUpdate",
       config = function ()
         local configs = require("nvim-treesitter.configs")
+
         configs.setup({
             ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html","yaml","terraform" },
             sync_install = false,
