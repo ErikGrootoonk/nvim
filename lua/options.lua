@@ -26,8 +26,8 @@ vim.wo.relativenumber = true
 vim.keymap.set('n', '<leader>v', '<C-v>')
 
 -- set C-s  to write
-vim.keymap.set('n', '<C-s>', ':w<cr>')
-vim.keymap.set('i', '<C-s>', '<c-o>:w<cr>')
+vim.keymap.set('n', '<F4>', ':w<cr>')
+vim.keymap.set('i', '<F4>', '<c-o>:w<cr>')
 
 -- enable 24-bit color
 vim.opt.termguicolors = true
