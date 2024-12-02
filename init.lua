@@ -38,14 +38,14 @@ end)
 
 
 vim.g.clipboard = {
-  name = 'WslClipboard',
+  name = 'win32yank-wsl',
   copy = {
-    ['+'] = 'clip.exe',
-    ['*'] = 'clip.exe',
+    ['+'] = '/mnt/c/tools/win32yank.exe -i --crlf',
+    ['*'] = '/mnt/c/tools/win32yank.exe -i --crlf',
   },
   paste = {
-    ['+'] = 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    ['*'] = 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    ['+'] = '/mnt/c/tools/win32yank.exe -o --lf',
+    ['*'] = '/mnt/c/tools/win32yank.exe -o --lf',
   },
   cache_enabled = 0,
 }
