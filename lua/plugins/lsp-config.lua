@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require ("mason-lspconfig").setup({
-      ensure_installed= {"lua_ls","pyright","grammarly"}
+      ensure_installed= {"lua_ls","pyright"}
       })
     end
   },
@@ -20,7 +20,6 @@ return {
       lspconfig.lua_ls.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       lspconfig.pyright.setup({})
-      lspconfig.grammarly.setup({})
     end
   }
 }
