@@ -18,13 +18,13 @@ vim.wo.number = true
 
 vim.opt.clipboard = "unnamedplus"
 
-in_wsl = os.getenv('WSL_DISTRO_NAME') ~= nil
+--local in_wsl = os.getenv('WSL_DISTRO_NAME') ~= nil
 
-if in_wsl then
-    vim.g.clipboard = {
-        name = 'wsl clipboard',
-        copy =  { ["+"] = { "clip.exe" },   ["*"] = { "clip.exe" } },
-        paste = { ["+"] = { "nvim_paste" }, ["*"] = { "nvim_paste" } },
-        cache_enabled = true
-    }
-end
+--if in_wsl then
+--    vim.g.clipboard = {
+--        name = 'wsl clipboard',
+--        copy =  { ["+"] = { "clip.exe" },   ["*"] = { "clip.exe" } },
+--        paste = { ["+"] = { "nvim_paste" }, ["*"] = { "nvim_paste" } },
+--        cache_enabled = true
+--    }
+--end
