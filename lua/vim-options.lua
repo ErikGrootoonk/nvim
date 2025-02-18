@@ -14,6 +14,9 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set('n', '<leader>v', '<C-v>')
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', '<F3>', ':w<CR>')
 vim.wo.number = true
 
 vim.opt.clipboard = "unnamedplus"
